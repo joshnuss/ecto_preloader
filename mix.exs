@@ -19,8 +19,7 @@ defmodule EctoPreloader.MixProject do
 
   defp deps do
     [
-      {:ecto, "> 0.3.0"},
-      {:ex_doc, github: "elixir-lang/ex_doc", only: :dev, runtime: false}
+      {:ecto, "> 0.3.0"}
     ]
   end
 end
