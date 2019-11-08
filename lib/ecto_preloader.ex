@@ -32,7 +32,6 @@ defmodule Ecto.Preloader do
   """
 
   import Ecto, only: [assoc: 2]
-  alias Ecto.Query
   alias Ecto.Query.Builder.{Join, Preload}
 
   defmacro preload_join(query, association) do
