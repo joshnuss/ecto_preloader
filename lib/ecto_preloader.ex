@@ -6,7 +6,7 @@ defmodule Ecto.Preloader do
 
   You could make it run faster by using a combination of join/preload, but that requires a bit of boilerplate (see example below).
 
-  With `Ecto.Preloader` preloading with a join takes just one line of code.
+  With `Ecto.Preloader`, you can accomplish it with just one line of code.
 
   ## Example using just Ecto
 
