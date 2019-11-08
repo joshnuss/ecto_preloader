@@ -1,16 +1,20 @@
 defmodule Ecto.Preloader do
   @moduledoc """
-  `Ecto.Preloader` is a module for preloading using joins.
+  `Ecto.Preloader` is a module for preloading associations using joins.
 
   By default, Ecto preloads associations using a separate query for each association, which can degrade performance.
 
-  You can make it faster by using a combination of join/preload, but that requires a bit of boilerplate.
+  You could make it run faster by using a combination of join/preload, but that requires a bit of boilerplate (see example below).
 
   With `Ecto.Preloader` preloading with a join takes just one line of code.
 
-  ## Example using Ecto join+assoc+preload
+  ## Example using just Ecto
+
+  It requires calling `Query.join/4`, `Query.assoc/3` and `Query.preload/2`
 
   ```
+  import Ecto.Query
+
   Invoice
   |> join(:left, [i], assoc(i, :customer), as: :customer)
   |> join(:left, [i], assoc(i, :lines), as: :lines)
@@ -20,7 +24,10 @@ defmodule Ecto.Preloader do
 
   ## Example using Ecto.Preloader
 
+  Just one method call:
+
   ```
+  import Ecto.Query
   import Ecto.Preloader
 
   Invoice
