@@ -1,8 +1,8 @@
 # Ecto.Preloader
 
-Preload your associations with joins.
+Preload your associations efficiently by using joins.
 
-You can preload/join with Ecto alone, it just requires some boilerplate code. With this package it's a one liner.
+You can do this with Ecto alone, it just requires more code. This package makes it a one liner.
 
 Full documentation: [https://hexdocs.pm/ecto_preloader](https://hexdocs.pm/ecto_preloader).
 
