@@ -1,11 +1,37 @@
-# EctoPreloader
+# Ecto.Preloader
 
-**TODO: Add description**
+Preload your associations with joins.
+
+You can preload/join with Ecto alone, it just requires some boilerplate code. With this package it's a one liner.
+
+Full documentation: [https://hexdocs.pm/ecto_preloader](https://hexdocs.pm/ecto_preloader).
+
+## Example usage
+
+```elixir
+import Ecto.Preloader
+
+Invoice
+|> preload_join(:customer)
+|> preload_join(:lines)
+|> Repo.all()
+```
+
+## Example using Ecto directly
+
+Without Ecto.Preloader it gets a bit repetitive:
+
+```elixir
+Invoice
+|> join(:left, [i], assoc(i, :customer), as: :customer)
+|> join(:left, [i], assoc(i, :lines), as: :lines)
+|> preload([lines: l, customers: c], lines: l, customer: c)
+|> Repo.all()
+```
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `ecto_preloader` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `ecto_preloader` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -15,7 +41,6 @@ def deps do
 end
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/ecto_preloader](https://hexdocs.pm/ecto_preloader).
+## License
 
+WTFPL
