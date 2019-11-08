@@ -9,8 +9,14 @@ defmodule EctoPreloader.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "Ecto.Preloader",
+      description: "Efficient preloading with joins",
       source_url: "https://github.com/joshnuss/ecto_preloader",
       homepage_url: "https://github.com/joshnuss/ecto_preloader",
+      package: [
+        maintainers: ["Joshua Nussbaum"],
+        licenses: ["MIT"],
+        links: %{github: "https://github.com/joshnuss/xml_builder"}
+      ],
       docs: [
         main: "Ecto.Preloader",
         extras: ["README.md"]
