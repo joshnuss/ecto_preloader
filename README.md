@@ -6,7 +6,7 @@ You can do this with Ecto alone, it just requires more code. This package makes 
 
 Full documentation: [https://hexdocs.pm/ecto_preloader](https://hexdocs.pm/ecto_preloader).
 
-## Example usage
+## Example usage:
 
 ```elixir
 import Ecto.Preloader
@@ -17,7 +17,7 @@ Invoice
 |> Repo.all()
 ```
 
-## Example using Ecto directly
+### Example using Ecto directly:
 
 Without Ecto.Preloader it gets a bit repetitive:
 
