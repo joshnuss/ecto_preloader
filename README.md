@@ -1,6 +1,6 @@
 # Ecto.Preloader
 
-Preload your associations efficiently by with joins.
+Preload your associations efficiently with joins.
 
 You can do this with Ecto alone, it just requires more code. This package makes it a one liner.
 
