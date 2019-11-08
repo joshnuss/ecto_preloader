@@ -15,7 +15,7 @@ defmodule EctoPreloader.MixProject do
       package: [
         maintainers: ["Joshua Nussbaum"],
         licenses: ["MIT"],
-        links: %{github: "https://github.com/joshnuss/xml_builder"}
+        links: %{github: "https://github.com/joshnuss/ecto_preloading"}
       ],
       docs: [
         main: "Ecto.Preloader",
