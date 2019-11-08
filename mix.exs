@@ -9,7 +9,7 @@ defmodule EctoPreloader.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       name: "Ecto.Preloader",
-      description: "Efficient preloading with joins",
+      description: "Preload your data efficiently with joins",
       source_url: "https://github.com/joshnuss/ecto_preloader",
       homepage_url: "https://github.com/joshnuss/ecto_preloader",
       package: [
