@@ -32,7 +32,8 @@ defmodule EctoPreloader.MixProject do
 
   defp deps do
     [
-      {:ecto, "> 0.3.0"}
+      {:ecto, "> 0.3.0"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
